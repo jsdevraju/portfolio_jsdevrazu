@@ -112,7 +112,6 @@ html {
   background: var(--primary-color);
   width: 60px;
   height: 60px;
-  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
@@ -292,7 +291,7 @@ html {
   height: 100vh;
   padding: 20px 0px;
   position: relative;
-  z-index: -2;
+  z-index: 1;
 }
 
 .home .container {

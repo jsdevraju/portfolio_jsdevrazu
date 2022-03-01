@@ -1262,11 +1262,18 @@
       const bars = document.querySelector(".bars");
       const close = document.querySelector(".close");
       const sidebar = document.querySelector(".sidebar");
+      const animation = document.getElementById('snow-animation-container');
+      const home =  document.querySelector('.home');
+
       bars.addEventListener("click", () => {
         sidebar.classList.add("active");
+        animation.style.zIndex = '-1';
+        home.style.zIndex = '-2'
       });
       close.addEventListener("click", () => {
         sidebar.classList.remove("active");
+        animation.style.zIndex = '1';
+        home.style.zIndex = '2'
       });
 
       // back to top

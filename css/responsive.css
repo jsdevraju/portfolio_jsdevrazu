@@ -1,5 +1,5 @@
-/* Laptop Device */
-@media (max-width: 990px) {
+/* Monitor Size 19 inch */
+@media (max-width:48cm){
   .sidebar {
     right: -500px;
   }
@@ -8,24 +8,6 @@
       width: 330px;
   }
 
-  .home .container {
-    flex-direction: row;
-  }
-
-  .home_content {
-    max-width: 100%;
-  }
-
-  .social {
-    width: 100%;
-    flex-direction: row;
-    left: 105px;
-    top: 400px;
-  }
-
-  .social a {
-    margin-right: 1rem;
-  }
   .bars {
     display: flex;
 }
@@ -36,13 +18,36 @@
     top: 10px;
     right: 125px;
 }
+
 .profile {
-    display: none;
+  display: none;
 }
 
 .copy_right {
-    display: none;
+  display: none;
 }
+
+}
+
+/* Laptop Device */
+@media (max-width: 990px) {
+
+  .home .container {
+    flex-direction: row;
+  }
+
+  .home_content {
+    max-width: 100%;
+  }
+  .social {
+    width: 100%;
+    flex-direction: row;
+    left: 105px;
+    top: 400px;
+  }
+  .social a {
+    margin-right: 1rem;
+  }
 }
 
 
