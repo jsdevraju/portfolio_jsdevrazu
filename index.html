@@ -70,37 +70,37 @@
         <div class="nav_item">
           <ul>
             <li>
-              <a href="#home" class="nav_links active">
+              <a href="#home_a" class="nav_links active home_a">
                 <i class="fa-solid fa-house"></i> Home</a
               >
             </li>
             <li>
-              <a href="#about" class="nav_links"
+              <a href="#about_a" class="nav_links about_a"
                 ><i class="fa-solid fa-address-card"></i> About</a
               >
             </li>
             <li>
-              <a href="#service" class="nav_links">
+              <a href="#service_a" class="nav_links service_a">
                 <i class="fa-solid fa-paste"></i> Service</a
               >
             </li>
             <li>
-              <a href="#portfolio" class="nav_links">
+              <a href="#portfolio_a" class="nav_links portfolio_a">
                 <i class="fa-solid fa-briefcase"></i> Portfolio</a
               >
             </li>
             <li>
-              <a href="#testimonial" class="nav_links">
+              <a href="#testimonial_a" class="nav_links testimonial_a">
                 <i class="fa-solid fa-quote-left"></i> Testimonial</a
               >
             </li>
             <li>
-              <a href="#blog" class="nav_links">
+              <a href="#blog_a" class="nav_links blog_a">
                 <i class="fa-brands fa-blogger"></i> Blog</a
               >
             </li>
             <li>
-              <a href="#contact" class="nav_links"
+              <a href="#contact_a" class="nav_links contact_a"
                 ><i class="fa-solid fa-envelope"></i> Contact</a
               >
             </li>
@@ -119,7 +119,7 @@
     <!-- Sidebar Ends Here -->
 
     <!-- Home Banner Start Here -->
-    <section class="home" id="home">
+    <section class="home" id="home_a">
       <div class="container">
         <div class="bars">
           <i class="fa-solid fa-bars-staggered"></i>
@@ -148,7 +148,7 @@
     <!-- Home Banner Ends Here -->
 
     <!-- About Section Start Here -->
-    <section class="about sec_p" id="about">
+    <section class="about sec_p" id="about_a">
       <div class="container">
         <div class="row g-5">
           <div class="col-lg-5 col-md-12">
@@ -576,7 +576,7 @@
     <!-- Resume Section Ends Here -->
 
     <!-- My Service Start Here  -->
-    <section class="service sec_p" id="service">
+    <section class="service sec_p" id="service_a">
       <div class="container">
         <div class="text-center">
           <h1 class="title">My Services</h1>
@@ -689,7 +689,7 @@
     <!-- Hire bg Section Ends Here  -->
 
     <!-- Faq Section Start Here -->
-    <section class="faq sec_p" id="faq">
+    <section class="faq sec_p">
       <div class="container">
         <div class="text-center">
           <h1 class="title">FAQS</h1>
@@ -834,7 +834,7 @@
     <!-- Faq Section Ends Here -->
 
     <!-- Portfolio Section Start Here -->
-    <section class="portfolio sec_p" id="portfolio">
+    <section class="portfolio sec_p" id="portfolio_a">
       <div class="container">
         <div class="text-center">
           <h1 class="title">My Portfolio</h1>
@@ -879,7 +879,7 @@
     <!-- Portfolio Section Start Here -->
 
     <!-- Testimonial Section Start Here -->
-    <section class="testimonial sec_p" id="testimonial">
+    <section class="testimonial sec_p" id="testimonial_a">
       <div class="container">
         <div class="text-center">
           <h1 class="title">Our Testimonial</h1>
@@ -961,7 +961,7 @@
     <!-- Testimonial Section Ends Here -->
 
     <!-- Blog Section Start Here -->
-    <section class="blog sec_p" id="blog">
+    <section class="blog sec_p" id="blog_a">
       <div class="container">
         <div class="text-center mb-5">
           <h1 class="title">Blog Posts</h1>
@@ -1087,7 +1087,7 @@
     <!-- Blog Section Ends Here -->
 
     <!-- Contact Section Start Here -->
-    <section class="contact sec_p" id="contact">
+    <section class="contact sec_p" id="contact_a">
       <div class="container">
         <div class="text-center mb-5">
           <h1 class="title">Contact</h1>
@@ -1193,6 +1193,7 @@
 
     <!-- Preloader -->
     <script src="./js/preload.min.js"></script>
+
 
     <!-- Slick Slider Js -->
     <script
@@ -1334,6 +1335,29 @@ $(function($){
     }
 
     menuLi.forEach((n) => n.addEventListener("click", setMenuActive));
+
+    // scroll spy
+
+    const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  menuLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+
+});
+
 
 
     </script>
