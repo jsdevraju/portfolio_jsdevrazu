@@ -211,10 +211,6 @@ html {
     color: var(--primary-color);
 }
 
-.nav_links:hover{
-  color: var(--btn-color);
-}
-
 .desc {
   color: var(--text-color);
   font-size: 1rem;
