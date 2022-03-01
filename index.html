@@ -62,7 +62,9 @@
         <!--Profile Here  -->
         <div class="profile">
           <img src="./images/profile-avatar.jpg" alt="Razu Islam" />
+         <a href="index.html">
           <span>Razu Islam</span>
+         </a>
         </div>
         <!-- Navbar Item -->
         <div class="nav_item">
@@ -1262,18 +1264,14 @@
       const bars = document.querySelector(".bars");
       const close = document.querySelector(".close");
       const sidebar = document.querySelector(".sidebar");
-      const animation = document.getElementById('snow-animation-container');
-      const home =  document.querySelector('.home');
 
       bars.addEventListener("click", () => {
         sidebar.classList.add("active");
-        animation.style.zIndex = '-1';
-        home.style.zIndex = '-2'
+        console.log('click')
       });
       close.addEventListener("click", () => {
         sidebar.classList.remove("active");
-        animation.style.zIndex = '1';
-        home.style.zIndex = '2'
+        console.log('click')
       });
 
       // back to top
@@ -1326,6 +1324,16 @@ $(function($){
   minTime: 2000
 });
 })
+
+// change active menu
+    const menuLi = document.querySelectorAll(".nav_links");
+
+    function setMenuActive() {
+      menuLi.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
+    }
+
+    menuLi.forEach((n) => n.addEventListener("click", setMenuActive));
 
 
     </script>

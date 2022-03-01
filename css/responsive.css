@@ -1,36 +1,54 @@
 /* Monitor Size 19 inch */
-@media (max-width:48cm){
+/*Container Width*/
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1194px;
+    padding-left: 20px !important;
+  }
+}
+
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px;
+    padding-left: 150px;
+}
+}
+
+/* Laptop Device */
+@media (max-width: 990px) {
   .sidebar {
     right: -500px;
   }
-  .sidebar.active{
-      right: 0px;
-      width: 330px;
+  .sidebar.active {
+    right: 0px;
+    width: 330px;
   }
 
   .bars {
     display: flex;
-}
-.close{
+    z-index: 1;
+  }
+  .close {
     display: flex;
     background-color: var(--btn-color);
     position: absolute;
     top: 10px;
     right: 125px;
-}
+    z-index: 100;
+  }
 
-.profile {
-  display: none;
-}
+  .profile {
+    display: none;
+  }
 
-.copy_right {
-  display: none;
-}
-
-}
-
-/* Laptop Device */
-@media (max-width: 990px) {
+  .copy_right {
+    display: none;
+  }
 
   .home .container {
     flex-direction: row;
@@ -50,26 +68,37 @@
   }
 }
 
-
 /* Tablet */
-@media (max-width:768px){
-    .social{
-        left: 38px;
-        top: 248px;
-    }
+@media (max-width: 768px) {
+  .social {
+    left: 38px;
+    top: 248px;
+  }
 }
 
-@media (max-width:520px){
-    .bars, .close {
-        right: 80px;
-    }
-    
-    .social {
-        top: 150px;
-        left: 10px;
-    }
-    
-    .progressbar-item {
-        width: 100%;
-    }
+@media (max-width: 520px) {
+  .bars,
+  .close {
+    right: 40px;
+  }
+
+  .social {
+    top: 150px;
+    left: 10px;
+  }
+
+  .progressbar-item {
+    width: 100%;
+  }
+  iframe{
+    width: 100%;
+  }
+
+  .home_content h3 {
+    margin-top: 1rem;
+}
+
+.home_content p {
+    margin-bottom: 0px;
+}
 }
